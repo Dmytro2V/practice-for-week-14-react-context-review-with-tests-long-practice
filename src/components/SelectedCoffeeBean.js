@@ -1,11 +1,11 @@
-import {useContext} from 'react'
 import {useContextBean} from '../context/CoffeeContext'
 
 const SelectedCoffeeBean = () => {
-  console.log('------  ------------',useContextBean);
+  const {coffeeBean} = useContextBean();
+  
   return (
     <div className="selected-coffee">
-      <h2>Current Selection: </h2>
+      <h2>Current Selection: {coffeeBean.name}</h2>
     </div>
   );
 }
